@@ -1,0 +1,26 @@
+# ASP.NET Core
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+
+# EF Core
+**/Migrations/*.Designer.cs
+**/Migrations/*.resx
+
+# Build
+bin/
+obj/
+
+# Docker
+.env
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.user
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db

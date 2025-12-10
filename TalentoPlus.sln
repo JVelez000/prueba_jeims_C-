@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0836270B-F8D4-46F0-B6F6-4B4D0E5AFB3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Domain", "src\TalentoPlus.Domain\TalentoPlus.Domain.csproj", "{0DFB5036-47BD-40F6-8CC5-1DA6E0027E2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Application", "src\TalentoPlus.Application\TalentoPlus.Application.csproj", "{B2407BD0-7FE5-419E-BD99-51F32A2D1707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Infrastructure", "src\TalentoPlus.Infrastructure\TalentoPlus.Infrastructure.csproj", "{50D9552E-BD8C-416E-A875-E47AE1FCB381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Web", "src\TalentoPlus.Web\TalentoPlus.Web.csproj", "{01A92DA9-52A2-40CF-B146-1BC4A5B73FB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.API", "src\TalentoPlus.API\TalentoPlus.API.csproj", "{5A144FBE-7661-478B-B7C8-9BCE99E4F9A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DFB5036-47BD-40F6-8CC5-1DA6E0027E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DFB5036-47BD-40F6-8CC5-1DA6E0027E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DFB5036-47BD-40F6-8CC5-1DA6E0027E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DFB5036-47BD-40F6-8CC5-1DA6E0027E2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2407BD0-7FE5-419E-BD99-51F32A2D1707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2407BD0-7FE5-419E-BD99-51F32A2D1707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2407BD0-7FE5-419E-BD99-51F32A2D1707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2407BD0-7FE5-419E-BD99-51F32A2D1707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D9552E-BD8C-416E-A875-E47AE1FCB381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D9552E-BD8C-416E-A875-E47AE1FCB381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D9552E-BD8C-416E-A875-E47AE1FCB381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D9552E-BD8C-416E-A875-E47AE1FCB381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01A92DA9-52A2-40CF-B146-1BC4A5B73FB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A92DA9-52A2-40CF-B146-1BC4A5B73FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A92DA9-52A2-40CF-B146-1BC4A5B73FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A92DA9-52A2-40CF-B146-1BC4A5B73FB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A144FBE-7661-478B-B7C8-9BCE99E4F9A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A144FBE-7661-478B-B7C8-9BCE99E4F9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A144FBE-7661-478B-B7C8-9BCE99E4F9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A144FBE-7661-478B-B7C8-9BCE99E4F9A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0DFB5036-47BD-40F6-8CC5-1DA6E0027E2B} = {0836270B-F8D4-46F0-B6F6-4B4D0E5AFB3A}
+		{B2407BD0-7FE5-419E-BD99-51F32A2D1707} = {0836270B-F8D4-46F0-B6F6-4B4D0E5AFB3A}
+		{50D9552E-BD8C-416E-A875-E47AE1FCB381} = {0836270B-F8D4-46F0-B6F6-4B4D0E5AFB3A}
+		{01A92DA9-52A2-40CF-B146-1BC4A5B73FB5} = {0836270B-F8D4-46F0-B6F6-4B4D0E5AFB3A}
+		{5A144FBE-7661-478B-B7C8-9BCE99E4F9A3} = {0836270B-F8D4-46F0-B6F6-4B4D0E5AFB3A}
+	EndGlobalSection
+EndGlobal

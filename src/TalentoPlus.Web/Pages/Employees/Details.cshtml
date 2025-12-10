@@ -1,0 +1,109 @@
+@page "{id:int}"
+@model TalentoPlus.Web.Pages.Employees.DetailsModel
+@{
+    ViewData["Title"] = "Detalles del Empleado";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>
+            <i class="bi bi-person-lines-fill"></i> @Model.Employee.FirstName @Model.Employee.LastName
+        </h1>
+        <div>
+            <!-- Botón PDF (Lo programaremos luego) -->
+            <a href="#" class="btn btn-outline-danger me-2">
+                <i class="bi bi-file-earmark-pdf"></i> Descargar HV
+            </a>
+            <a asp-page="./Edit" asp-route-id="@Model.Employee.Id" class="btn btn-warning">
+                <i class="bi bi-pencil"></i> Editar
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Tarjeta 1: Información Principal -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Datos Personales</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>Documento:</strong> <br> @Model.Employee.DocumentNumber
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Email:</strong> <br> 
+                            <a href="mailto:@Model.Employee.Email">@Model.Employee.Email</a>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Teléfono:</strong> <br> @(Model.Employee.Phone ?? "N/A")
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Dirección:</strong> <br> @(Model.Employee.Address ?? "N/A")
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Fecha Nacimiento:</strong> <br> @Model.Employee.BirthDate?.ToString("dd/MM/yyyy")
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2: Información Laboral -->
+        <div class="col-md-8 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Información Corporativa</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <label class="text-muted small">Departamento</label>
+                            <p class="fs-5 fw-bold">@Model.Employee.DepartmentName</p>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label class="text-muted small">Cargo</label>
+                            <p class="fs-5 fw-bold">@Model.Employee.JobTitleName</p>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label class="text-muted small">Salario</label>
+                            <p class="fs-5 text-success">@Model.Employee.Salary.ToString("C")</p>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label class="text-muted small">Fecha de Ingreso</label>
+                            <p class="fs-5">@Model.Employee.HireDate.ToString("dd/MM/yyyy")</p>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label class="text-muted small">Nivel Educativo</label>
+                            <p>@Model.Employee.EducationLevelName</p>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label class="text-muted small">Estado Actual</label>
+                            <div>
+                                <span class="badge @(Model.Employee.EmploymentStatusName.Contains("Activo") ? "bg-success" : "bg-secondary") fs-6">
+                                    @Model.Employee.EmploymentStatusName
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+                    
+                    <div class="mb-3">
+                        <label class="text-muted small">Perfil Profesional</label>
+                        <p class="card-text bg-light p-3 rounded">
+                            @(Model.Employee.ProfessionalProfile ?? "Sin perfil registrado.")
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a asp-page="./Index" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Volver a la lista
+        </a>
+    </div>
+</div>

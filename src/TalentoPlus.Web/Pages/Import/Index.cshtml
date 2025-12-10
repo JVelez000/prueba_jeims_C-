@@ -1,0 +1,48 @@
+@page
+@model TalentoPlus.Web.Pages.Import.IndexModel
+@{
+    ViewData["Title"] = "Carga Masiva";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title mb-0">Importar Empleados desde Excel</h3>
+        </div>
+        <div class="card-body">
+            
+            @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+            {
+                <div class="alert alert-success">
+                    <i class="bi bi-check-circle"></i> @Model.SuccessMessage
+                    <br>
+                    <a asp-page="/Employees/Index" class="alert-link">Ver lista de empleados</a>
+                </div>
+            }
+
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="alert alert-danger">
+                    <i class="bi bi-exclamation-octagon"></i> @Model.ErrorMessage
+                </div>
+            }
+
+            <form method="post" enctype="multipart/form-data">
+                <div class="mb-4">
+                    <label class="form-label">Selecciona el archivo (.xlsx)</label>
+                    <input asp-for="UploadedFile" class="form-control" type="file" accept=".xlsx" required />
+                    <div class="form-text">
+                        Asegúrate de que el Excel tenga las columnas: Documento, Nombres, Apellidos, Fecha Nacimiento, etc.
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Subir y Procesar
+                    </button>
+                    <a asp-page="/Employees/Index" class="btn btn-link">Volver al listado</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

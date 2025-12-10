@@ -1,0 +1,52 @@
+@page "{id:int}"
+@model TalentoPlus.Web.Pages.Employees.DeleteModel
+
+@{
+    ViewData["Title"] = "Eliminar Empleado";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card border-danger shadow">
+                <div class="card-header bg-danger text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Confirmar Eliminación
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-warning">
+                        ¿Estás seguro de que deseas eliminar a este empleado? Esta acción es irreversible.
+                    </div>
+
+                    <dl class="row">
+                        <dt class="col-sm-4">Nombre:</dt>
+                        <dd class="col-sm-8">@Model.Employee.FirstName @Model.Employee.LastName</dd>
+
+                        <dt class="col-sm-4">Documento:</dt>
+                        <dd class="col-sm-8">@Model.Employee.DocumentNumber</dd>
+
+                        <dt class="col-sm-4">Cargo:</dt>
+                        <dd class="col-sm-8">@Model.Employee.JobTitleName</dd>
+
+                        <dt class="col-sm-4">Departamento:</dt>
+                        <dd class="col-sm-8">@Model.Employee.DepartmentName</dd>
+                    </dl>
+
+                    <!-- Formulario que envía la orden POST -->
+                    <form method="post" asp-route-id="@Model.Id">
+                        <!-- El ID viaja en la URL gracias a asp-route-id, pero el hidden es respaldo -->
+                        <input type="hidden" asp-for="Employee.Id" />
+                        
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <a asp-page="./Index" class="btn btn-secondary me-md-2">Cancelar</a>
+                            <button type="submit" class="btn btn-danger">¡Eliminar Definitivamente!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div asp-validation-summary="All" class="text-danger mt-3"></div>
+        </div>
+    </div>
+</div>

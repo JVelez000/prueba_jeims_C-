@@ -1,0 +1,716 @@
+dotnet watch ⌚ File added: /home/jvelez/Documents/TalentoPlus/src/TalentoPlus.Application/Services/DashboardService.cs~
+dotnet watch ⌚ File updated: /home/jvelez/Documents/TalentoPlus/src/TalentoPlus.Application/Services/DashboardService.cs
+dotnet watch ⌚ File added: /home/jvelez/Documents/TalentoPlus/src/TalentoPlus.Application/Services/DashboardService.cs~
+dotnet watch ⌚ File updated: /home/jvelez/Documents/TalentoPlus/src/TalentoPlus.Application/Services/DashboardService.cs
+
+🔍 [DashboardService] Pregunta: 'cuantos departamentos hay?'
+dotnet watch 🔥 [TalentoPlus.Web (net9.0)] Hot reload succeeded.
+
+🔍 [DashboardService] Pregunta: 'cuantos departamentos hay?'
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (287ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (208ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (202ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (212ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (201ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (212ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (210ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (210ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (200ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (217ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (257ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (208ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (410ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT d.id, d.createdat, d.description, d.name, d.updatedat
+      FROM departments AS d
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (398ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT d.id, d.createdat, d.description, d.name, d.updatedat
+      FROM departments AS d
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (226ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (227ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (387ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (386ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (250ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (251ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (261ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (261ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (307ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (307ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (409ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (410ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (411ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (408ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (408ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+🔍 [DashboardService] API Key: CONFIGURADA
+✅ [DashboardService] Llamando a Gemini API...
+🔍 [DashboardService] API Key: CONFIGURADA
+✅ [DashboardService] Llamando a Gemini API...
+❌ [DashboardService] Error Gemini API: TooManyRequests
+❌ [DashboardService] Error detalle: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 43.944898548s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count",
+            "quotaId": "GenerateContentInputTokensPerModelPerMinute-FreeTier",
+            "quotaDimensions": {
+              "model": "gemini-2.0-flash",
+              "location": "global"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "43s"
+      }
+    ]
+  }
+}
+
+❌ [DashboardService] Error Gemini API: TooManyRequests
+❌ [DashboardService] Error detalle: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 43.916017814s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count",
+            "quotaId": "GenerateContentInputTokensPerModelPerMinute-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "model": "gemini-2.0-flash",
+              "location": "global"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "43s"
+      }
+    ]
+  }
+}
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (212ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (211ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (203ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (208ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (201ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (209ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+
+🔍 [DashboardService] Pregunta: 'cuantos departamentos hay?'
+
+🔍 [DashboardService] Pregunta: 'cuantos departamentos hay?'
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (537ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (219ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (217ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (203ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (215ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (207ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (210ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (204ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (204ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (202ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (377ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (203ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (212ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT d.id, d.createdat, d.description, d.name, d.updatedat
+      FROM departments AS d
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (197ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT d.id, d.createdat, d.description, d.name, d.updatedat
+      FROM departments AS d
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (200ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (213ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (204ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (211ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (224ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (209ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (237ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (232ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (200ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (208ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (203ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (207ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (200ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (214ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (200ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (208ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (206ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (214ms) [Parameters=[@__departmentId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      WHERE e.departmentid = @__departmentId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (208ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (212ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (203ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (208ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (203ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (209ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (211ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (210ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (203ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+🔍 [DashboardService] API Key: CONFIGURADA
+✅ [DashboardService] Llamando a Gemini API...
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (208ms) [Parameters=[@__lowerName_0_contains='?'], CommandType='Text', CommandTimeout='30']
+      SELECT count(*)::int
+      FROM employees AS e
+      INNER JOIN employmentstatuses AS e0 ON e.employmentstatusid = e0.id
+      WHERE lower(e0.statusname) LIKE @__lowerName_0_contains
+🔍 [DashboardService] API Key: CONFIGURADA
+✅ [DashboardService] Llamando a Gemini API...
+❌ [DashboardService] Error Gemini API: TooManyRequests
+❌ [DashboardService] Error detalle: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 26.645233924s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count",
+            "quotaId": "GenerateContentInputTokensPerModelPerMinute-FreeTier",
+            "quotaDimensions": {
+              "model": "gemini-2.0-flash",
+              "location": "global"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "26s"
+      }
+    ]
+  }
+}
+
+❌ [DashboardService] Error Gemini API: TooManyRequests
+❌ [DashboardService] Error detalle: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 26.594704202s.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Learn more about Gemini API quotas",
+            "url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count",
+            "quotaId": "GenerateContentInputTokensPerModelPerMinute-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "location": "global",
+              "model": "gemini-2.0-flash"
+            }
+          },
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+            "quotaDimensions": {
+              "model": "gemini-2.0-flash",
+              "location": "global"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+        "retryDelay": "26s"
+      }
+    ]
+  }
+}

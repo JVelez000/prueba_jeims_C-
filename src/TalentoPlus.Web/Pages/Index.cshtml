@@ -1,0 +1,212 @@
+﻿@page
+@model TalentoPlus.Web.Pages.IndexModel
+@{
+ViewData["Title"] = "Dashboard - TalentoPlus";
+}
+
+<style>
+    /* Estilos CSS personalizados para tarjetas profesionales y hover */
+    .dashboard-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: default;
+        border-left-width: 7px !important; /* Borde más grueso */
+        border-radius: 1rem !important; /* Bordes más redondeados para toda la tarjeta */
+    }
+    .dashboard-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important; /* Sombra más sutil y elegante */
+    }
+    /* Estilos para los colores pastel ligeros */
+    .bg-pastel-primary { background-color: #e6f0ff !important; color: #004085 !important; border-color: #007bff !important; }
+    .bg-pastel-success { background-color: #e6ffe8 !important; color: #155724 !important; border-color: #28a745 !important; }
+    .bg-pastel-warning { background-color: #fffbe6 !important; color: #856404 !important; border-color: #ffc107 !important; }
+
+    .card-text.text-muted { font-weight: 500; }
+    .card-title { font-size: 2.25rem; }
+
+    /* Estilos para el Chat Flotante de IA */
+    .ia-chat-window {
+        position: fixed;
+        bottom: 100px; /* Arriba del botón flotante */
+        right: 20px;
+        width: 350px;
+        max-height: 450px;
+        z-index: 1050;
+        display: none;
+    }
+    .ia-chat-bubble {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1060;
+    }
+</style>
+
+<div class="container-fluid mt-5">
+    <h1 class="mb-5 text-dark fw-bold">Panel de Control de TalentoPlus</h1>
+
+    <!-- 1. TARJETAS DE KPI (Estilo Ejecutivo con Colores Pastel y Hover) -->
+    <div class="row mb-5 g-4">
+
+        <!-- Tarjeta 1: Total Empleados -->
+        <div class="col-lg-4 col-sm-6">
+            <div class="card shadow-sm border-0 rounded-3 h-100 dashboard-card bg-pastel-primary">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <p class="card-text mb-1 small text-uppercase">Total Registrados</p>
+                            <h3 class="card-title mb-0 fs-1 fw-bold">@Model.Metrics.TotalEmployees</h3>
+                        </div>
+                        <i class="bi bi-people-fill fs-2 opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2: Empleados Activos -->
+        <div class="col-lg-4 col-sm-6">
+            <div class="card shadow-sm border-0 rounded-4 h-100 dashboard-card bg-pastel-success">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <p class="card-text mb-1 small text-uppercase">Activos</p>
+                            <h3 class="card-title mb-0 fs-1 fw-bold">@Model.Metrics.ActiveEmployees</h3>
+                        </div>
+                        <i class="bi bi-person-check-fill fs-2 opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3: Empleados en Vacaciones -->
+        <div class="col-lg-4 col-sm-6">
+            <div class="card shadow-sm border-0 rounded-4 h-100 dashboard-card bg-pastel-warning">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <p class="card-text mb-1 small text-uppercase">En Vacaciones</p>
+                            <h2 class="card-title mb-0 fs-1 fw-bold">@Model.Metrics.VacationEmployees</h2>
+                        </div>
+                        <i class="bi bi-suitcase-lg-fill fs-2 opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. SECCIÓN DE INTELIGENCIA ARTIFICIAL (Chat Flotante) -->
+    <div id="iaChatWindow" class="ia-chat-window card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-info text-white border-bottom">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0"><i class="bi bi-cpu-fill me-2"></i> Asistente de RRHH (IA)</h5>
+                <button type="button" class="btn-close btn-close-white" id="closeChatBtn" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="card-body p-3" style="height: 350px; overflow-y: auto;">
+
+            <!-- Mensaje de Bienvenida -->
+            <div class="d-flex justify-content-start mb-2">
+                <div class="p-2 rounded" style="background-color: #f8f9fa; max-width: 85%; border: 1px solid #dee2e6;">
+                    <small class="text-muted">IA:</small><br>
+                    <span class="fw-bold">¡Hola!</span> Soy tu asistente de datos. Pregúntame algo sobre los empleados.
+                </div>
+            </div>
+
+            <!-- Área para las respuestas -->
+            <!-- Modifica SOLO esta parte del chatResponseArea: -->
+            <div id="chatResponseArea">
+                @if (!string.IsNullOrEmpty(Model.AIResponse))
+                {
+                    <!-- Elimina el alert y pon esto: -->
+                    <div class="d-flex justify-content-end mb-2">
+                        <div class="p-2 rounded" style="background-color: #e3f2fd; max-width: 85%; border: 1px solid #bbdefb;">
+                            <small class="text-primary fw-bold">Usuario:</small><br>
+                            <span>@Model.LastQuestion</span>
+                        </div>
+                    </div>
+        
+                    <div class="d-flex justify-content-start mb-2">
+                        <div class="p-2 rounded" style="background-color: #f8f9fa; max-width: 85%; border: 1px solid #dee2e6;">
+                            <small class="text-muted">Asistente IA:</small><br>
+                            <span class="fw-bold">@Html.Raw(Model.AIResponse)</span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="card-footer p-2 bg-light">
+            <form method="post" asp-page-handler="AskAI">
+                <div class="input-group">
+                    <input type="text" asp-for="AISuggestion" class="form-control" placeholder="Ej: ¿Cuántos empleados hay en Tecnología?" required />
+                    <button class="btn btn-info" type="submit">Consultar</button>
+                </div>
+                @if (!ModelState.IsValid)
+                {
+                <div asp-validation-summary="ModelOnly" class="text-danger mt-1 small"></div>
+                }
+            </form>
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE (La "bolita" abajo a la derecha) -->
+    <button id="openChatBtn" class="btn btn-info btn-lg rounded-circle shadow-lg"
+            style="position: fixed; bottom: 20px; right: 20px; z-index: 1060; width: 70px; height: 70px; display: none;">
+        <i class="bi bi-chat-dots-fill fs-3"></i>
+    </button>
+
+    <!-- Enlaces rápidos -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <a asp-page="/Employees/Index" class="btn btn-lg btn-primary me-2 mb-2"><i class="bi bi-people-fill"></i> Gestión Empleados</a>
+            <a asp-page="/Import/Index" class="btn btn-lg btn-outline-secondary me-2 mb-2"><i class="bi bi-file-arrow-up"></i> Importar Excel</a>
+            <a href="#" class="btn btn-lg btn-outline-success me-2 mb-2"><i class="bi bi-file-earmark-pdf"></i> Generar Reportes</a>
+            <a href="#" class="btn btn-lg btn-outline-danger mb-2"><i class="bi bi-gear-fill"></i> Configuración</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openBtn = document.getElementById('openChatBtn');
+            const closeBtn = document.getElementById('closeChatBtn');
+            const chatWindow = document.getElementById('iaChatWindow');
+            const responseArea = document.getElementById('chatResponseArea');
+
+            openBtn.style.display = 'block'; 
+
+            openBtn.addEventListener('click', function() {
+                chatWindow.style.display = 'block';
+                openBtn.style.display = 'none';
+                if (responseArea) responseArea.scrollTop = responseArea.scrollHeight;
+            });
+
+            closeBtn.addEventListener('click', function() {
+                chatWindow.style.display = 'none';
+                openBtn.style.display = 'block';
+            });
+            
+            // Lógica simplificada para mostrar el chat si hay respuesta
+            var aiResponseExists = @(Html.Raw(!string.IsNullOrEmpty(Model.AIResponse) ? "true" : "false"));
+            
+            // Obtener la pregunta del modelo de forma segura (sin JavaScriptEncode)
+            var lastQuestion = '@Html.Raw(Model.LastQuestion?.Replace("'", "\\'").Replace("\"", "\\\"") ?? "")';
+            
+            // Solo mostrar el chat si hay respuesta
+            if (aiResponseExists) {
+                chatWindow.style.display = 'block';
+                openBtn.style.display = 'none';
+                
+                // Scroll al final del chat
+                setTimeout(function() {
+                    if (responseArea) responseArea.scrollTop = responseArea.scrollHeight;
+                }, 200);
+            }
+            
+            // Auto-enfocar el campo de entrada cuando se abre el chat
+            document.querySelector('input[asp-for="AISuggestion"]')?.addEventListener('focus', function() {
+                this.focus();
+            });
+        });
+    </script>
+}

@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: talentoplus-postgres
+    environment:
+      POSTGRES_DB: talentoplus_db
+      POSTGRES_USER: talentoplus_user
+      POSTGRES_PASSWORD: TempP@ss123!
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - talentoplus-network
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: talentoplus-web
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Host=postgres;Database=talentoplus_db;Username=talentoplus_user;Password=TempP@ss123!"
+    ports:
+      - "5000:80"
+    depends_on:
+      - postgres
+    networks:
+      - talentoplus-network
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: talentoplus-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Host=postgres;Database=talentoplus_db;Username=talentoplus_user;Password=TempP@ss123!"
+    ports:
+      - "5001:80"
+    depends_on:
+      - postgres
+    networks:
+      - talentoplus-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  talentoplus-network:
+    driver: bridge
